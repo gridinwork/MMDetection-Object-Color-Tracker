@@ -1,0 +1,14 @@
+# Installed by install.bat in this order. Do not run a single pip install -r
+# before PyTorch: MMCV wheels must match the CUDA/Torch build, and Torch 2.1
+# needs NumPy 1.26.
+
+torch==2.1.2+cu121
+torchvision==0.16.2+cu121
+numpy==1.26.4
+mmcv==2.1.0
+mmengine>=0.10.3,<1.0.0
+mmdet==3.3.0
+PySide6>=6.6,<6.10
+opencv-python==4.10.0.84
+scipy>=1.11,<1.14
+pillow>=9,<11
