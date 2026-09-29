@@ -1,0 +1,16 @@
+MMDetection Object & Color Vision Studio
+
+This project uses the OpenMMLab MMDetection ecosystem as an external dependency.
+
+MMDetection
+Copyright 2018-2023 OpenMMLab. All rights reserved.
+Licensed under the Apache License, Version 2.0.
+Upstream project: https://github.com/open-mmlab/mmdetection
+
+MMCV and MMEngine are also OpenMMLab projects and remain subject to their own
+upstream license and copyright notices.
+
+RTMDet / RTMDet-Ins / Mask R-CNN model checkpoints are downloaded separately.
+They are not redistributed in this repository. Users are responsible for
+reviewing the licenses and terms associated with third-party model weights,
+datasets, and dependencies they choose to download or use.
