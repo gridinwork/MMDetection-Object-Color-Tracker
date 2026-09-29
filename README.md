@@ -10,7 +10,7 @@ The application processes webcam streams, video files and still images locally. 
 
 The goal was to turn the MMDetection model/inference ecosystem into a practical real-time desktop vision application instead of using command-line demos and separate scripts.
 
-This project uses the algorithms, model zoo and inference infrastructure provided by [OpenMMLab MMDetection](https://github.com/open-mmlab/mmdetection). MMDetection itself is not copied into this repository; it is installed as a dependency. The application layer, GUI, source management, tracking logic, color analysis, rendering, model manager and workflow integration in this repository were developed around that stack.
+This project was developed as a desktop application around the algorithms, model zoo and inference infrastructure provided by [OpenMMLab MMDetection](https://github.com/open-mmlab/mmdetection). MMDetection itself is not vendored into this repository; it is installed as an external dependency. The application layer, GUI, source management, local object tracker, color-analysis pipeline, visualization, model manager and workflow integration were developed specifically for this project.
 
 ## Main capabilities
 
@@ -41,23 +41,23 @@ This project uses the algorithms, model zoo and inference infrastructure provide
 
 ### Object detection and color recognition
 
-![Detection and color recognition](docs/images/demo_01.webp)
+![Detection and color recognition](docs/images/demo_01.png)
 
 The application detects multiple people and objects and estimates visible colors directly from image pixels rather than deriving colors from class names.
 
-![Multi-object tracking and color analysis](docs/images/demo_02.webp)
+![Multi-object tracking and color analysis](docs/images/demo_02.png)
 
 ### Instance segmentation
 
-![Instance segmentation example 1](docs/images/demo_03.webp)
+![Instance segmentation example 1](docs/images/demo_03.png)
 
 When an instance-segmentation model is active, the program can use object masks for more accurate color measurement and render semi-transparent masks over detected instances.
 
-![Instance segmentation example 2](docs/images/demo_04.webp)
+![Instance segmentation example 2](docs/images/demo_04.png)
 
 ### Tracking, masks and motion trails
 
-![Tracking and segmentation example](docs/images/demo_05.webp)
+![Tracking and segmentation example](docs/images/demo_05.png)
 
 Objects can retain persistent IDs across frames. Their center movement is used to estimate motion direction, and recent positions can be rendered as motion trails.
 
@@ -227,15 +227,17 @@ After Python packages and selected model weights have been downloaded, normal ca
 
 ## License and upstream attribution
 
-This repository is released under the **Apache License 2.0**.
+This repository's original application code is released under the **Apache License 2.0**.
 
-The project is built on the OpenMMLab MMDetection ecosystem:
+The project depends on the OpenMMLab ecosystem rather than redistributing its source code:
 
-- [MMDetection](https://github.com/open-mmlab/mmdetection) — Apache License 2.0
-- MMCV / MMEngine — OpenMMLab components with their respective licenses
-- RTMDet / RTMDet-Ins model checkpoints are downloaded separately and are not redistributed in this repository.
+- [MMDetection 3.3.0](https://github.com/open-mmlab/mmdetection/tree/v3.3.0) — Apache License 2.0
+- [MMCV 2.1.0](https://github.com/open-mmlab/mmcv/tree/v2.1.0) — Apache License 2.0
+- [MMEngine](https://github.com/open-mmlab/mmengine) — Apache License 2.0
+- RTMDet / RTMDet-Ins / Mask R-CNN checkpoints are downloaded separately and are not committed to this repository.
+- COCO-trained models can also be subject to the terms of the datasets and assets used to train them.
 
-See [LICENSE](LICENSE) and [NOTICE](NOTICE).
+See [LICENSE](LICENSE) and [NOTICE](NOTICE) for attribution and third-party notes.
 
 ## Responsible use
 
