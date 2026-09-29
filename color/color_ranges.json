@@ -1,0 +1,23 @@
+{
+  "neutral": {
+    "black_v_max": 42,
+    "white_s_max": 28,
+    "white_v_min": 200,
+    "gray_s_max": 32
+  },
+  "categories": [
+    {"name": "RED", "rgb": [210, 30, 30]},
+    {"name": "DARK RED", "rgb": [105, 18, 22]},
+    {"name": "ORANGE", "rgb": [230, 120, 25]},
+    {"name": "YELLOW", "rgb": [240, 210, 35]},
+    {"name": "GREEN", "rgb": [40, 170, 50]},
+    {"name": "DARK GREEN", "rgb": [18, 80, 30]},
+    {"name": "CYAN", "rgb": [25, 190, 200]},
+    {"name": "BLUE", "rgb": [30, 70, 210]},
+    {"name": "DARK BLUE", "rgb": [12, 25, 110]},
+    {"name": "PURPLE", "rgb": [140, 45, 180]},
+    {"name": "PINK", "rgb": [235, 130, 175]},
+    {"name": "BROWN", "rgb": [125, 72, 35]},
+    {"name": "BEIGE", "rgb": [225, 205, 165]}
+  ]
+}
