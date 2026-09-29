@@ -1,0 +1,1 @@
+"""On-frame drawing."""
